@@ -1,0 +1,30 @@
+@define-mixin OnePlus {
+
+    /*One Plus Screen*/
+    @media(min-width:400px) {
+        @mixin-content
+    }
+}
+
+@define-mixin MobileView {
+
+    /*Crome Mobile Window*/
+    @media(min-width:500px) {
+        @mixin-content
+    }
+}
+
+@define-mixin DesktopView {
+
+    /*Crome Tab Window*/
+    @media(min-width:992px) {
+        @mixin-content
+    }
+}
+
+@define-mixin extraLargeScreen {
+    /*Crome Desktop Window*/
+    @media(min-width:1200px) {
+        @mixin-content
+    }
+}

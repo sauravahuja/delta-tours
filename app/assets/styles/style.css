@@ -1,0 +1,31 @@
+/* 
+* File Architecture
+* Identify patterns in the design
+* rules to be followed to name the classes of CSS
+* B - BLOCK
+* E - ELEMENT
+* M - MODIFIER
+ */
+/* SOURCE SET USED FOR FILE SIZE MGMT WHILE DOWNLOADING IT --> */
+/* PICTURE TAG IS USED FOR CROPPING --> */
+@import "normalize.css";
+/*@import "bootstrap";*/
+
+@import "base/_helper-classes";
+
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_global";
+
+@import "modules/_home";
+@import "modules/_hero-slider";
+@import "modules/_services";
+/*
+@import "modules/_helper";
+@import "modules/_heading";
+@import "modules/_services";
+@import "modules/_counter";
+@import "modules/_testimonial";
+@import "modules/_footer";
+*/
+@import "modules/_btn";

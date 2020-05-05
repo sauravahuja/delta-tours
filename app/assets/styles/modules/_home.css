@@ -1,0 +1,26 @@
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+/*************
+Blob Image
+*************/
+
+.bg-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+/*    z-index: -9999;*/
+
+    @mixin OnePlus {
+        height: 500px;
+        display: none;
+    }
+
+    @mixin DesktopView {
+        transform: translate(260px, -440px);
+        height: 1200px;
+        display: block;
+    }
+}

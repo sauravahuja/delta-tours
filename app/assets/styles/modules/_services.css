@@ -1,0 +1,90 @@
+#services {
+    .section-header {
+        .title {
+            color: $primary;
+            font-family: 'poppins', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+
+        }
+
+        .subtitle {
+            font-size: 38px;
+            color: $textColorHead;
+        }
+    }
+
+    .service-content {
+        &__text {
+            color: $textColorPara;
+        }
+    }
+
+    .our-services {
+        @mixin DesktopView {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 70px;
+        }
+/*
+        @mixin Screen{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr;
+        }
+*/
+
+        .service-block {
+            @mixin OnePlus{
+                padding-top: 50px;
+            }
+            @mixin DesktopView {
+                width: 300px;
+            }
+        }
+
+        .service-1 {
+            .service-1-bg {
+                background-image: url("assets/images/%5Bcolorlib.com%5D%5B138%5Dblob-shape-2.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 150px;
+                height: 150px;
+                position: relative;
+                margin: 0 135px;
+
+                @mixin OnePlus {
+                    margin: 0 135px;
+                }
+
+                @mixin MobileView {
+                    margin: 0 170px;
+                }
+                @mixin DesktopView{
+                    margin: 0 80px;
+                }
+                .service-img {
+                    position: absolute;
+                    padding-top: 40px;
+                    padding-left: 40px;
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            .service-content {
+                .head {
+                    font-size: 18px;
+                    font-family: 'poppins',sans-serif;
+                    font-weight: 400;
+                }
+                .description{
+                    font-size: 15px;
+                    font-weight: 300;
+                    padding: 0 40px;
+                    color: $textColorPara;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+
+    &-primary {
+        background: $primary;
+        color: $white;
+        font-weight: 500;
+        transition: all .3s linear;
+    }
+    &-primary:hover{
+        background: $primaryBtnHover;
+        color: $white;
+    }
+    &-primary:focus{
+        background: $primaryBtnHover;
+        color: $white;
+    }
+}
