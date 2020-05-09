@@ -1,5 +1,5 @@
 .btn {
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 5px;
 
     &-primary {
@@ -14,6 +14,21 @@
     }
     &-primary:focus{
         background: $primaryBtnHover;
+        color: $white;
+    }
+    
+    &-white {
+        background: $white;
+        color: $textColorHead;
+        font-weight: 500;
+        transition: all .3s linear;
+    }
+    &-white:hover{
+        background: $textColorHead;
+        color: $white;
+    }
+    &-white:focus{
+        background: $textColorHead;
         color: $white;
     }
 }

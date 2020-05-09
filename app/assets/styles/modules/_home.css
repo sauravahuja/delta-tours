@@ -11,9 +11,14 @@ Blob Image
     position: absolute;
     right: 0;
     top: 0;
-/*    z-index: -9999;*/
+    /*    z-index: -9999;*/
 
     @mixin OnePlus {
+        height: 500px;
+        display: none;
+    }
+
+    @mixin smallScreen {
         height: 500px;
         display: none;
     }

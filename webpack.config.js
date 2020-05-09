@@ -21,7 +21,7 @@ module.exports = {
 		},
 		contentBase: path.join(__dirname, "app"),
 		hot: true,
-		port: 2000,
+		port: 3000,
 		host: '0.0.0.0' //it is broadcast address it will allow my website to broadcast
 	},
 	mode: "development",

@@ -21,6 +21,16 @@ Hero Slider
             }
 
             .content-left {
+                @mixin smallScreen {
+                    width: 350px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    color: $white;
+                    text-align: center;
+                }
                 @mixin OnePlus {
                     width: 380px;
                     position: absolute;
@@ -49,6 +59,9 @@ Hero Slider
 
                 .title {
                     font-size: 42px;
+                    @mixin smallScreen{
+                        font-size: 32px;
+                    }
                 }
 
                 .subtitle {
@@ -70,6 +83,18 @@ Hero Slider
             }
 
             .content-right {
+                @mixin smallScreen {
+                    background-position: center;
+                    background-attachment: scroll;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    position: relative;
+                    z-index: 0;
+
+                    height: 560px;
+                    width: 100%;
+                }
                 @mixin OnePlus {
                     background-position: center;
                     background-attachment: scroll;
@@ -82,7 +107,6 @@ Hero Slider
                     height: 790px;
                     width: 100%;
                 }
-
                 @mixin DesktopView {
                     position: relative;
                     z-index: 0;

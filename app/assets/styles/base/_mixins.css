@@ -1,3 +1,11 @@
+@define-mixin smallScreen {
+
+    /*other small devices Screen*/
+    @media(min-width:350px) {
+        @mixin-content
+    }
+}
+
 @define-mixin OnePlus {
 
     /*One Plus Screen*/
@@ -13,7 +21,7 @@
         @mixin-content
     }
 }
-
+/*768*/
 @define-mixin DesktopView {
 
     /*Crome Tab Window*/

@@ -1,0 +1,79 @@
+.best-destination {
+    .container{
+        @mixin DesktopView{
+            padding: 0 100px;
+        }
+    }
+    .destination-content {
+        &__text {
+            color: $textColorPara;
+        }
+    }
+
+    &__card-wrapper {
+        position: relative;
+        @mixin DesktopView{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .destination-card {
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+            -5px -5px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            transform: translateX(30px);
+            margin-top: 30px;
+            width: 350px;
+            /* margin: 0 20px; */
+            &:hover img{
+                transform: scale(1);
+            }
+            &:focus img{
+                transform: scale(1.2);
+            }
+            @mixin DesktopView{
+                transform: none;
+            }
+            &__img-container {
+                border-radius: 10px 10px 0 0 ;
+                overflow: hidden;
+                @mixin DesktopView{
+                    height: 270px;
+                    width: 100%;
+                }
+                img{
+                    height: 350px;
+                    width: 370px;
+                    transform: scale(1.2);
+                    transition: all .4s ease-in-out;
+                    
+                }
+            }
+            &__content{
+                transform: translateY(-10px);
+                .price-tag{
+                    display: inline-block;
+                    background: #d39f97;
+                    color: $white;
+                    padding: 10px 20px;
+                    font-weight: 700;
+                    transform: translate(20px,-10px);
+                }
+                .card-content{
+                    padding: 0px 20px;
+                    .days{
+                        font-weight: 500;
+                        color: $textColorPara;
+                    }
+                    &__review{
+                        transform: translateY(-10px);
+                        color: #d39f97;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}
