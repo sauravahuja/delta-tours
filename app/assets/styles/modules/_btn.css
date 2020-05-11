@@ -8,26 +8,30 @@
         font-weight: 500;
         transition: all .3s linear;
     }
-    &-primary:hover{
+
+    &-primary:hover {
         background: $primaryBtnHover;
         color: $white;
     }
-    &-primary:focus{
+
+    &-primary:focus {
         background: $primaryBtnHover;
         color: $white;
     }
-    
+
     &-white {
         background: $white;
         color: $textColorHead;
         font-weight: 500;
         transition: all .3s linear;
     }
-    &-white:hover{
+
+    &-white:hover {
         background: $textColorHead;
         color: $white;
     }
-    &-white:focus{
+
+    &-white:focus {
         background: $textColorHead;
         color: $white;
     }

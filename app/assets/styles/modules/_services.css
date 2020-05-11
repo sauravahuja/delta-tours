@@ -11,10 +11,12 @@
             font-size: 38px;
         }
     }
+
     #services {
-        .subtitle{
+        .subtitle {
             color: $textColorHead;
         }
+
         .service-content {
             &__text {
                 color: $textColorPara;
@@ -22,30 +24,26 @@
         }
 
         .our-services {
-            @mixin TabView{
+            @mixin TabView {
                 display: flex;
                 flex-wrap: wrap;
             }
+
             @mixin DesktopView {
                 display: flex;
                 justify-content: space-between;
                 padding: 20px 70px;
             }
 
-            /*
-        @mixin Screen{
-            display: grid;
-            grid-template-columns: 2fr 2fr 2fr 2fr;
-        }
-*/
-
             .service-block {
                 @mixin OnePlus {
                     padding-top: 50px;
                 }
-                @mixin TabView{
+
+                @mixin TabView {
                     width: 390px;
                 }
+
                 @mixin DesktopView {
                     width: 300px;
                 }
@@ -73,9 +71,11 @@
                     @mixin MobileView {
                         margin: 0 170px;
                     }
-                    @mixin TabView{
+
+                    @mixin TabView {
                         margin: 0 120px;
                     }
+
                     @mixin DesktopView {
                         margin: 0 80px;
                     }

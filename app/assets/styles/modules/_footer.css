@@ -9,8 +9,9 @@
         @mixin DesktopView {
             padding: 0 120px;
         }
-        .content-box-md{
-            @mixin smallScreen{
+
+        .content-box-md {
+            @mixin smallScreen {
                 padding: 30px 0;
             }
         }
@@ -46,15 +47,18 @@
                 }
 
                 .question {
-                    @mixin MobileView{
+                    @mixin MobileView {
                         width: 200px;
                     }
+
                     .question-content {
                         color: $lightGrey;
                     }
                 }
+
                 .social-icons {
                     padding-top: 25px;
+
                     /* margin-left: -20px; */
                     .social-bg {
                         background: #ccc;
@@ -66,19 +70,22 @@
                         }
                     }
                 }
-                .facebook{
+
+                .facebook {
                     span {
                         padding-left: 4px;
                         padding-right: 4px;
                     }
                 }
             }
-            .footer-display{
-               a{
+
+            .footer-display {
+                a {
                     color: $primary;
                 }
-                p{
-                    
+
+                p {
+
                     padding-top: 10px;
                 }
             }

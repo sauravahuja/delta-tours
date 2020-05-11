@@ -19,6 +19,7 @@
 
 
 @import "modules/_btn";
+@import "modules/_navbar";
 @import "modules/_home";
 @import "modules/_hero-slider";
 @import "modules/_services";

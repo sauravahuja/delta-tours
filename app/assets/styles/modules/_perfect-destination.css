@@ -1,36 +1,42 @@
-#perfect-destination{
-    .full-wrapper-bg{
+#perfect-destination {
+    .full-wrapper-bg {
         position: relative;
         background-image: url("assets/images/[colorlib.com][660]bg3.jpg");
         background-repeat: no-repeat;
         height: 400px;
         background-position: center;
-        @mixin OnePlus{
+
+        @mixin OnePlus {
             height: 450px;
         }
-        .overlay{
+
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
         }
-        .section-header{
+
+        .section-header {
             padding: 110px 20px;
-            @mixin OnePlus{
+
+            @mixin OnePlus {
                 padding: 80px 20px;
             }
-            @mixin DesktopView{
+
+            @mixin DesktopView {
                 padding: 125px 20px;
             }
+
             color: $white;
-            .subtitle{
+
+            .subtitle {
                 font-size: 38px;
-            }    
-            .title{
-                
             }
+
+            .title {}
         }
     }
 }
