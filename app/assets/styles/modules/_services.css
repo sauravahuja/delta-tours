@@ -11,7 +11,6 @@
             font-size: 38px;
         }
     }
-
     #services {
         .subtitle{
             color: $textColorHead;
@@ -23,6 +22,10 @@
         }
 
         .our-services {
+            @mixin TabView{
+                display: flex;
+                flex-wrap: wrap;
+            }
             @mixin DesktopView {
                 display: flex;
                 justify-content: space-between;
@@ -40,7 +43,9 @@
                 @mixin OnePlus {
                     padding-top: 50px;
                 }
-
+                @mixin TabView{
+                    width: 390px;
+                }
                 @mixin DesktopView {
                     width: 300px;
                 }
@@ -68,7 +73,9 @@
                     @mixin MobileView {
                         margin: 0 170px;
                     }
-
+                    @mixin TabView{
+                        margin: 0 120px;
+                    }
                     @mixin DesktopView {
                         margin: 0 80px;
                     }

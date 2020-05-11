@@ -1,0 +1,127 @@
+#testimonial {
+    .testimonial-container {
+        background: $bgBlue;
+        position: relative;
+        overflow: hidden;
+
+        .section-header {
+            color: $white;
+
+            .title {
+                color: $white;
+            }
+        }
+
+        .bg-blob-left {
+            position: absolute;
+            left: -410px;
+            top: -170px;
+            z-index: -10px;
+            display: none;
+            @mixin DesktopView {
+                display: block;
+                left: -210px;
+                top: -95px;
+            }
+        }
+
+        .bg-blob-right {
+            position: absolute;
+            right: -130px;
+            bottom: -30px;
+            width: 300px;
+            @mixin DesktopView {
+                width: 40%;
+                right: -210px;
+                bottom: -95px;
+            }
+        }
+
+        #testimonial-wrapper {
+            .testimonial {
+                padding: 50px 20px;
+
+                &__user-img {
+                    width: 120px;
+                    height: 120px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    img {
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 50%;
+                    }
+
+                    .quote-container {
+                        display: inline-block;
+                        background: #d39f97;
+                        color: $white;
+                        position: absolute;
+                        bottom: 0;
+                        right: -10px;
+                        padding: 0 15px;
+                        border-radius: 50%;
+
+                        span {
+                            font-size: 14px;
+                            ;
+                        }
+                    }
+                }
+
+                &__content {
+                    text-align: center;
+                    color: $white;
+                }
+            }
+        }
+
+        .owl-theme .owl-dots {
+            position: absolute;
+            top: 90%;
+            left: 37%;
+            z-index: 99999;
+
+            @mixin TabView{
+                left: 47%;
+            }
+            @mixin DesktopView {
+                left: 47%;
+            }
+
+        }
+
+        .owl-theme .owl-dots .owl-dot {
+            border: solid 1px $white;
+            border-radius: 50%;
+            transform: scale(0.5);
+
+            @mixin DesktopView {
+                transform: none;
+                padding: 2px 0;
+                margin: 2px;
+            }
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            background: transparent;
+            border-radius: 0;
+            border-radius: 50%;
+
+            @mixin DesktopView {
+                transform: scale(1.4);
+            }
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: $white;
+
+        }
+
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: $white;
+        }
+    }
+}

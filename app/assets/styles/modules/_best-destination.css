@@ -24,17 +24,32 @@
             display: inline-block;
             transform: translateX(30px);
             margin-top: 30px;
-            width: 350px;
-            /* margin: 0 20px; */
+            width: 300px;
             &:hover img{
                 transform: scale(1);
             }
             &:focus img{
                 transform: scale(1.2);
             }
+            @mixin smallScreen{
+                width: 300px;
+            }
+            @mixin OnePlus{
+                width: 350px;
+                margin-left: 0;
+            }
+            @mixin MobileView{
+                margin-left: 35px;
+            }
+            @mixin TabView{
+                margin-left: 10px;
+            }
             @mixin DesktopView{
                 transform: none;
+                width: 325px;
+                margin-left: 0;
             }
+            
             &__img-container {
                 border-radius: 10px 10px 0 0 ;
                 overflow: hidden;

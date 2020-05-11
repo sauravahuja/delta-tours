@@ -1,0 +1,86 @@
+#blogs {
+    .container {
+        padding: 0 15px;
+        @mixin DesktopView{
+            margin: 0 100px;
+        } 
+    }
+
+    .blog-wrapper {
+        @mixin TabView{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @mixin DesktopView{
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog {
+            width: 350px;
+            height: 510px;
+            margin-left: 15px;
+            margin-top: 35px;   
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+                -3px -3px 10px rgba(0, 0, 0, 0.1);
+            @mixin smallScreen{
+                /* margin-left */
+            }
+            @mixin MobileView{
+                margin-left: 50px;
+            }
+            @mixin TabView{
+                margin-left: 20px;
+            }
+            @mixin DesktopView{
+                margin-left: 0;
+            }
+            &-img {
+                position: relative;
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 270px;
+                }
+
+                .blog-date {
+                    color: $white;
+                    position: absolute;
+                    top: -25px;
+                    left: 5px;
+
+                    .date {
+                        font-size: 40px;
+
+                        .month-year {
+                            width: 20px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                padding: 0 10px;
+
+                &-subtitle {
+                    color: $textColorPara;
+                }
+
+                &-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 38px;
+
+                    .btn {
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+        .desktop-unset{
+            @mixin DesktopView{
+                display: none;
+            }
+        }
+    }
+}

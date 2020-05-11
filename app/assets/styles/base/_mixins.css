@@ -21,7 +21,13 @@
         @mixin-content
     }
 }
-/*768*/
+
+@define-mixin TabView {
+    @media(min-width: 768px) {
+        @mixin-content
+    }
+}
+
 @define-mixin DesktopView {
 
     /*Crome Tab Window*/
@@ -31,6 +37,7 @@
 }
 
 @define-mixin extraLargeScreen {
+
     /*Crome Desktop Window*/
     @media(min-width:1200px) {
         @mixin-content

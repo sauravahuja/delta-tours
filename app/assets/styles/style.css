@@ -17,17 +17,13 @@
 @import "base/_mixins";
 @import "base/_global";
 
+
+@import "modules/_btn";
 @import "modules/_home";
 @import "modules/_hero-slider";
 @import "modules/_services";
 @import "modules/_perfect-destination";
 @import "modules/_best-destination";
-/*
-@import "modules/_helper";
-@import "modules/_heading";
-@import "modules/_services";
-@import "modules/_counter";
 @import "modules/_testimonial";
-@import "modules/_footer";
-*/
-@import "modules/_btn";
+@import "modules/_blogs.css";
+@import "modules/_footer.css";

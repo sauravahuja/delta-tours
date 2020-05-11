@@ -164,21 +164,3 @@ Hero Slider
 }
 
 /*TWEAKING OWL CAROUSEL*/
-.owl-theme .owl-dots {
-    position: absolute;
-    top: 93%;
-    left: 45%;
-    z-index: 99999;
-    @mixin DesktopView{
-        left: 47%;
-    }
-}
-
-.owl-theme .owl-dots .owl-dot span {
-    border-radius: 0;
-}
-
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: $primaryBtnHover;
-}

@@ -1,0 +1,88 @@
+#footer {
+    background-color: $darkBlack;
+
+    .container {
+        @mixin smallScreen {
+            padding: 0 20px;
+        }
+
+        @mixin DesktopView {
+            padding: 0 120px;
+        }
+        .content-box-md{
+            @mixin smallScreen{
+                padding: 30px 0;
+            }
+        }
+
+        .footer-wrapper {
+            color: $white;
+
+            .footer-contents {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                h3 {
+                    font-size: 23px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    color: $lightGrey;
+
+                    a {
+                        color: $lightGrey;
+                    }
+
+                    a:hover {
+                        color: $white;
+                    }
+
+                    li {
+                        padding-top: 7px;
+                    }
+                }
+
+                .question {
+                    @mixin MobileView{
+                        width: 200px;
+                    }
+                    .question-content {
+                        color: $lightGrey;
+                    }
+                }
+                .social-icons {
+                    padding-top: 25px;
+                    /* margin-left: -20px; */
+                    .social-bg {
+                        background: #ccc;
+                        padding: 10px;
+                        border-radius: 50%;
+
+                        span {
+                            color: #222;
+                        }
+                    }
+                }
+                .facebook{
+                    span {
+                        padding-left: 4px;
+                        padding-right: 4px;
+                    }
+                }
+            }
+            .footer-display{
+               a{
+                    color: $primary;
+                }
+                p{
+                    
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+}
