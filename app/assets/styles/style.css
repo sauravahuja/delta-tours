@@ -6,20 +6,24 @@
 * E - ELEMENT
 * M - MODIFIER
  */
+
+
 /* SOURCE SET USED FOR FILE SIZE MGMT WHILE DOWNLOADING IT --> */
+
+
 /* PICTURE TAG IS USED FOR CROPPING --> */
+
 @import "normalize.css";
+
 /*@import "bootstrap";*/
 
 @import "base/_helper-classes";
-
 @import "base/_variables";
 @import "base/_mixins";
 @import "base/_global";
-
-
 @import "modules/_btn";
 @import "modules/_navbar";
+@import "modules/_mobile-nav";
 @import "modules/_home";
 @import "modules/_hero-slider";
 @import "modules/_services";

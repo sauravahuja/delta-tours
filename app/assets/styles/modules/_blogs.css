@@ -27,11 +27,14 @@
                 -3px -3px 10px rgba(0, 0, 0, 0.1);
 
             @mixin smallScreen {
-                /* margin-left */
+                margin-left: 0;
+                width:330px;
             }
-
+            @mixin OnePlus{
+                margin-left: 25px;
+            }
             @mixin MobileView {
-                margin-left: 50px;
+                margin-left: 65px;
             }
 
             @mixin TabView {

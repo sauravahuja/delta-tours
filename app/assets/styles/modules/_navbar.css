@@ -4,73 +4,168 @@
     left: 0;
     right: 0;
     z-index: 999;
-
+    #navigation-bar {
+        padding: 0 80px;
+        @mixin OnePlus {
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2)
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            background: transparent;
+            color: $darkBlack;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            .logo {
+                align-self: center;
+                .logo-content {
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 32px;
+                    width: 270px;
+                    color: $textColorPara;
+                    @mixin smallScreen {
+                        padding-left: 20px;
+                        margin-left: -25px;
+                        font-size: 24px;
+                    }
+                    @mixin OnePlus {
+                        margin-left: -20px;
+                        font-size: 30px;
+                        color: $white;
+                    }
+                    @mixin MobileView {
+                        padding-left: 30px;
+                        margin: 0;
+                        font-size: 32px;
+                    }
+                    @mixin DesktopView {
+                        color: $textColorHead;
+                    }
+                }
+            }
+            .nav-list {
+                @mixin smallScreen {
+                    display: none;
+                }
+                @mixin OnePlus {
+                    display: none;
+                }
+                @mixin DesktopView {
+                    display: flex;
+                }
+                .nav-item {
+                    align-self: center;
+                    &-links {
+                        border-radius: 7px;
+                        padding: 10px 15px;
+                        color: $darkBlack;
+                        scroll-behavior: smooth;
+                        transition: all .3s ease-in;
+                        &:hover {
+                            background-color: $primary;
+                            color: $darkBlack;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .nav-on-scroll {
-        background: #fff;
-        opacity: 0.9;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
         position: fixed;
         left: 0;
         right: 0;
+        top: 0;
         animation: animateNav .3s;
+        .nav-wrapper {
+            .logo {
+                .logo-content {
+                    color: $textColorHead !important;
+                }
+            }
+        }
+        .ham-burger {
+            @mixin smallScreen {
+                /* background: $bgBlue; */
+                display: inline-block;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                height: 30px;
+                width: 30px;
+            }
+            @mixin OnePlus {
+                /* background: $bgBlue; */
+                display: inline-block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+                height: 30px;
+                width: 30px;
+            }
+            @mixin DesktopView {
+                display: none;
+            }
+            .bar {
+                content: "";
+                position: absolute;
+                /* top: 25px; */
+                right: 25px;
+                width: 20px;
+                height: 3px;
+                background: $bgBlue;
+                transform-origin: 0 50%;
+                transition: all .3s ease-out;
+                @mixin smallScreen {}
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                    width: 20px;
+                    height: 3px;
+                    background: $bgBlue;
+                    transform-origin: 0 0;
+                    transition: transform .3s ease-out;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -8px;
+                    left: 0;
+                    width: 20px;
+                    height: 3px;
+                    background: $bgBlue;
+                    transform-origin: 0 100%;
+                    transition: transform .3s ease-out;
+                }
+                &-close {
+                    &::before {
+                        transform: rotate(45deg) scaleX(1.25);
+                    }
+                    & {
+                        background: transparent;
+                    }
+                    &::after {
+                        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+                    }
+                }
+            }
+        }
     }
-
     @keyframes animateNav {
         from {
             top: -100px;
             left: 0;
             right: 0;
         }
-
         to {
             top: 0;
             left: 0;
             right: 0;
-        }
-    }
-
-    #navigation-bar {
-        padding: 0 80px;
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            background: transparent;
-            color: $darkBlack;
-
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            .logo {
-                align-self: center;
-
-                .logo-content {
-                    font-family: 'Orbitron', sans-serif;
-                    font-size: 32px;
-                }
-            }
-
-            .nav-list {
-                display: flex;
-
-                .nav-item {
-                    align-self: center;
-
-                    &-links {
-                        border-radius: 10px;
-                        padding: 10px 15px;
-                        color: $darkBlack;
-                        scroll-behavior: smooth;
-                        &:hover {
-                            background-color: $primary;
-                            color: $white;
-                        }
-                    }
-
-                }
-            }
         }
     }
 }

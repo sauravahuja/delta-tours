@@ -1,36 +1,44 @@
 .btn {
     padding: 15px 25px;
     border-radius: 5px;
-
     &-primary {
         background: $primary;
         color: $white;
         font-weight: 500;
         transition: all .3s linear;
     }
-
     &-primary:hover {
         background: $primaryBtnHover;
         color: $white;
     }
-
     &-primary:focus {
         background: $primaryBtnHover;
         color: $white;
     }
-
+    &-blue {
+        background: $bgBlue;
+        color: $white;
+        font-weight: 500;
+        transition: all .3s linear;
+    }
+    &-blue:hover {
+        background: $white;
+        color: $textColorHead;
+    }
+    &-blue:focus {
+        background: $white;
+        color: $textColorHead;
+    }
     &-white {
         background: $white;
         color: $textColorHead;
         font-weight: 500;
         transition: all .3s linear;
     }
-
     &-white:hover {
         background: $textColorHead;
         color: $white;
     }
-
     &-white:focus {
         background: $textColorHead;
         color: $white;
